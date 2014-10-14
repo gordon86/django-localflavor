@@ -31,10 +31,8 @@ class SGPostCodeField(RegexField):
         'invalid': _('Enter a 6-digit postal code.'),
     }
 
-    def __init__(self, max_length=None, min_length=None, *args, **kwargs):
-        super(SGPostCodeField, self).__init__(r'^\d{6}$',
-                                              max_length, min_length,
-                                              *args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super(SGPostCodeField, self).__init__(r'^\d{6}$', *args, **kwargs)
 
 
 class SGPhoneNumberField(CharField):
